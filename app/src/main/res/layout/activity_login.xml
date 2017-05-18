@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    tools:context="co.jlabs.travos.Login">
+
+
+    <co.jlabs.travos.custComp.BebasNeueButton
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@+id/inv"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="18dp"
+        android:text="SIGN UP"
+        android:id="@+id/sign_up"
+        android:textSize="18sp"
+
+        android:textColor="#A8A9AB"
+        android:gravity="center"
+        android:background="@drawable/login_back"
+        android:layout_alignParentBottom="true"
+        android:layout_height="48dp" />
+    <co.jlabs.travos.custComp.BebasNeueButton
+        android:layout_width="match_parent"
+        android:layout_alignRight="@+id/inv"
+        android:layout_marginBottom="48dp"
+        android:layout_marginLeft="18dp"
+        android:id="@+id/sign_in"
+
+        android:background="@drawable/login_back"
+        android:layout_marginRight="8dp"
+        android:text="SIGN IN"
+        android:textColor="#494949"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_height="48dp" />
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/inv"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:layout_alignParentBottom="true"/>
+    <co.jlabs.travos.custComp.BebasNeueTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#5F6064"
+        android:text="OR"
+        android:id="@+id/or"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_above="@+id/sign_in"/>
+    <co.jlabs.travos.custComp.BebasNeueButton
+        android:layout_width="match_parent"
+        android:background="@drawable/fb_back"
+        android:textColor="#FFFEFF"
+        android:gravity="center"
+
+        android:textAllCaps="false"
+        android:id="@+id/fblogin"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="18dp"
+        android:layout_above="@+id/or"
+        android:textSize="18sp"
+        android:text="Login through Facebook"
+        android:layout_height="48dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/fblogin"
+        android:layout_marginBottom="35dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dummylogo"/>
+    <co.jlabs.travos.custComp.BebasNeueButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:textAllCaps="false"
+        android:padding="5dp"
+        android:id="@+id/skip"
+        android:layout_alignParentRight="true"
+        android:text="Skip Login"/>
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginbutton"
+        android:visibility="gone"/>
+
+</RelativeLayout>
