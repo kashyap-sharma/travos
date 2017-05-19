@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="co.jlabs.travos.SignIn">
     <co.jlabs.travos.custComp.BebasNeueButton
         android:layout_width="match_parent"
@@ -19,5 +20,72 @@
         android:id="@+id/bar"
         android:layout_above="@+id/signup"
         android:background="#E1E2E6"/>
+    <co.jlabs.travos.custComp.BebasNeueButton
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/bar"
+        android:background="#00000000"
+        android:textAllCaps="false"
+        android:layout_marginBottom="15dp"
+        android:textColor="#292929"
+        android:text="Forgot Password"
+        android:id="@+id/forgot"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+    <co.jlabs.travos.custComp.BebasNeueButton
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:text="LOGIN"
 
+        android:textColor="#fff"
+        android:id="@+id/login"
+        android:textSize="18sp"
+        android:layout_marginRight="15dp"
+        android:layout_above="@+id/forgot"
+        android:background="@drawable/login_filled_back"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/input_password"
+        android:layout_above="@+id/login"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:textColorHint="#9FA0A2"
+            android:hint="Password"
+            android:id="@+id/password"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/input_username"
+        android:layout_above="@+id/input_password"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:textColorHint="#9FA0A2"
+            android:hint="Email"
+            android:id="@+id/username"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <co.jlabs.travos.custComp.BebasNeueButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:textAllCaps="false"
+        android:padding="5dp"
+        android:id="@+id/skip"
+        android:layout_alignParentRight="true"
+        android:text="Skip Login"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/input_username"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dummylogo"/>
 </RelativeLayout>
