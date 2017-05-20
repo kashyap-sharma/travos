@@ -5,4 +5,6 @@
     <string name="cancelled">Cancelled</string>
     <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
     <string name="ok">OK</string>
+    <string name="prompt">India</string>
+    <string name="reset">Enter your email below to reset\nyour password</string>
 </resources>

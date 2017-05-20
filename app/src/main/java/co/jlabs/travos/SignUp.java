@@ -1,73 +1,57 @@
 package co.jlabs.travos;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import co.jlabs.travos.custComp.BebasNeueButton;
 import co.jlabs.travos.custComp.BebasNeueEditText;
 
-public class SignIn extends AppCompatActivity implements View.OnClickListener {
+public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
+    private BebasNeueButton signin;
     private BebasNeueButton signup;
-    private TextView bar;
-    private BebasNeueButton forgot;
-    private BebasNeueButton login;
+    private RadioGroup radiogrp;
     private BebasNeueEditText password;
-    private TextInputLayout inputPassword;
     private BebasNeueEditText username;
-    private TextInputLayout inputUsername;
+    private BebasNeueEditText name;
     private BebasNeueButton skip;
-    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        context=this;
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_sign_up);
         initView();
     }
 
     private void initView() {
+        signin = (BebasNeueButton) findViewById(R.id.signin);
         signup = (BebasNeueButton) findViewById(R.id.signup);
-        bar = (TextView) findViewById(R.id.bar);
-        forgot = (BebasNeueButton) findViewById(R.id.forgot);
-        login = (BebasNeueButton) findViewById(R.id.login);
+        radiogrp = (RadioGroup) findViewById(R.id.radiogrp);
         password = (BebasNeueEditText) findViewById(R.id.password);
-        inputPassword = (TextInputLayout) findViewById(R.id.input_password);
         username = (BebasNeueEditText) findViewById(R.id.username);
-        inputUsername = (TextInputLayout) findViewById(R.id.input_username);
+        name = (BebasNeueEditText) findViewById(R.id.name);
         skip = (BebasNeueButton) findViewById(R.id.skip);
 
+        signin.setOnClickListener(this);
         signup.setOnClickListener(this);
-        forgot.setOnClickListener(this);
-        login.setOnClickListener(this);
         skip.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.signin:
+
+                break;
             case R.id.signup:
 
                 break;
-            case R.id.forgot:
-                Intent intent=new Intent(context, ResetPass.class);
-                startActivity(intent);
-                break;
-            case R.id.login:
-
-                break;
             case R.id.skip:
-                Intent intent2=new Intent(context,TellUsAbit.class);
-                startActivity(intent2);
+
                 break;
         }
     }
@@ -83,6 +67,12 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         String usernameString = username.getText().toString().trim();
         if (TextUtils.isEmpty(usernameString)) {
             Toast.makeText(this, "Email", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String nameString = name.getText().toString().trim();
+        if (TextUtils.isEmpty(nameString)) {
+            Toast.makeText(this, "Name", Toast.LENGTH_SHORT).show();
             return;
         }
 

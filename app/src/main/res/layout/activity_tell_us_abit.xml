@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.jlabs.travos.TellUsAbit">
+    <co.jlabs.travos.custComp.BebasNeueTextView
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#292929"
+        android:text="Tell us a bit more about yourself..."/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/input_age"
+        android:layout_above="@+id/nat"
+        android:layout_height="wrap_content">
+        <co.jlabs.travos.custComp.BebasNeueEditText
+            android:layout_width="match_parent"
+            android:textColorHint="#9FA0A2"
+            android:hint="Age"
+            android:maxLines="1"
+            android:inputType="numberPassword"
+            android:textColor="#292929"
+            android:id="@+id/age"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <co.jlabs.travos.custComp.BebasNeueTextView
+        android:layout_width="wrap_content"
+        android:text="Nationality"
+        android:textColor="#292929"
+        android:paddingLeft="25dp"
+        android:textSize="17sp"
+        android:id="@+id/nat"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
+    <co.jlabs.travos.custComp.BebasNeueTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:text="India"
+        android:id="@+id/country"
+        android:drawableRight="@drawable/down"
+        android:textSize="15sp"
+        android:layout_below="@+id/nat"/>
+
+    <co.jlabs.travos.custComp.BebasNeueButton
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:text="Continue"
+        android:textColor="#fff"
+        android:id="@+id/continu"
+        android:textSize="18sp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/login_filled_back"/>
+</RelativeLayout>

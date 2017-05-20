@@ -2,6 +2,6 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#B5B5B5</color>
-    <color name="colorAccent">#EEEFF3</color>
+    <color name="colorAccent">#AFB0B2</color>
     <color name="log_back">#686B70</color>
 </resources>

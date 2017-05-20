@@ -19,6 +19,7 @@
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -32,7 +33,10 @@
             android:authorities="com.facebook.app.FacebookContentProvider1371577649589638"
             android:exported="true" />
 
-        <activity android:name=".SignIn"></activity>
+        <activity android:name=".SignIn" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".ResetPass" />
+        <activity android:name=".TellUsAbit"></activity>
     </application>
 
 </manifest>

@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Typeface;
+import android.support.design.widget.TextInputEditText;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +17,7 @@ import android.widget.TextView;
 import co.jlabs.travos.R;
 
 
-public class BebasNeueEditText extends EditText {
+public class BebasNeueEditText extends TextInputEditText {
 
 
     public BebasNeueEditText(Context context) {

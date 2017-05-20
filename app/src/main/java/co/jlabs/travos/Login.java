@@ -1,6 +1,7 @@
 package co.jlabs.travos;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -51,12 +52,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     String string_bday="";
     String string_gender="";
     String string_location="";
-
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(this.getApplicationContext());
+        context=this;
         setContentView(R.layout.activity_login);
         initView();
 
@@ -173,16 +175,19 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.sign_up:
-
+                Intent intent1=new Intent(context,SignUp.class);
+                startActivity(intent1);
                 break;
             case R.id.sign_in:
-
+                Intent intent=new Intent(context,SignIn.class);
+                startActivity(intent);
                 break;
             case R.id.fblogin:
                 loginbutton.performClick();
                 break;
             case R.id.skip:
-
+                Intent intent2=new Intent(context,TellUsAbit.class);
+                startActivity(intent2);
                 break;
 
         }
