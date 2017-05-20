@@ -36,7 +36,11 @@
         <activity android:name=".SignIn" />
         <activity android:name=".SignUp" />
         <activity android:name=".ResetPass" />
-        <activity android:name=".TellUsAbit"></activity>
+        <activity android:name=".TellUsAbit" />
+        <activity
+            android:name=".MainPage"
+            android:label="@string/title_activity_main_page"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

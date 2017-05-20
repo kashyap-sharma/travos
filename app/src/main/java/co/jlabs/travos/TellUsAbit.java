@@ -1,7 +1,10 @@
 package co.jlabs.travos;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.ContextThemeWrapper;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
@@ -18,10 +21,11 @@ public class TellUsAbit extends AppCompatActivity implements View.OnClickListene
     private BebasNeueEditText age;
     private BebasNeueTextView country;
     private BebasNeueButton continu;
-
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context=this;
         setContentView(R.layout.activity_tell_us_abit);
         initView();
     }
@@ -39,8 +43,10 @@ public class TellUsAbit extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.continu:
-
+                Intent intent=new Intent(context, MainPage.class);
+                startActivity(intent);
                 break;
+
             case R.id.country:
                 CountryPicker picker = CountryPicker.newInstance("Select Country");  // dialog title
                 picker.setListener(new CountryPickerListener() {

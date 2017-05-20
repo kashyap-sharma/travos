@@ -37,7 +37,6 @@
         android:layout_height="48dp"
         android:layout_marginLeft="15dp"
         android:text="LOGIN"
-
         android:textColor="#fff"
         android:id="@+id/login"
         android:textSize="18sp"
