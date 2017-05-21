@@ -39,7 +39,7 @@
         <activity android:name=".TellUsAbit" />
         <activity
             android:name=".MainPage"
-            android:label="@string/title_activity_main_page"
+            android:label=""
             android:theme="@style/AppTheme"></activity>
     </application>
 

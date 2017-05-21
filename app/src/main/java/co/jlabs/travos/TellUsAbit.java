@@ -48,11 +48,12 @@ public class TellUsAbit extends AppCompatActivity implements View.OnClickListene
                 break;
 
             case R.id.country:
-                CountryPicker picker = CountryPicker.newInstance("Select Country");  // dialog title
+                final CountryPicker picker = CountryPicker.newInstance("Select Country");  // dialog title
                 picker.setListener(new CountryPickerListener() {
                     @Override
                     public void onSelectCountry(String name, String code, String dialCode, int flagDrawableResID) {
                         country.setText(name);
+                        picker.dismiss();
                     }
                 });
                 picker.show(getSupportFragmentManager(), "COUNTRY_PICKER");
