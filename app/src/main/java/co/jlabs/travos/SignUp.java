@@ -1,5 +1,7 @@
 package co.jlabs.travos;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -19,11 +21,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     private BebasNeueEditText username;
     private BebasNeueEditText name;
     private BebasNeueButton skip;
-
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        context=this;
         initView();
     }
 
@@ -45,13 +48,16 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.signin:
-
+                Intent inten=new Intent(context,SignIn.class);
+                startActivity(inten);
                 break;
             case R.id.signup:
-
+                Intent intent=new Intent(context,TellUsAbit.class);
+                startActivity(intent);
                 break;
             case R.id.skip:
-
+                Intent intents=new Intent(context,MainPage.class);
+                startActivity(intents);
                 break;
         }
     }

@@ -37,6 +37,7 @@ public class TellUsAbit extends AppCompatActivity implements View.OnClickListene
 
         continu.setOnClickListener(this);
         country.setOnClickListener(this);
+        age.setTransformationMethod(null);
     }
 
     @Override

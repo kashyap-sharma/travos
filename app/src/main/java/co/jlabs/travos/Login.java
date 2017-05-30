@@ -95,7 +95,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         fblogin.setOnClickListener(this);
         skip.setOnClickListener(this);
         loginbutton = (LoginButton) findViewById(R.id.loginbutton);
-        loginbutton.setReadPermissions(Arrays.asList("public_profile, email", "user_birthday", "user_friends", "user_location"));
+        loginbutton.setReadPermissions(Arrays.asList("public_profile, email",  "user_friends", "user_location"));
+        //loginbutton.setReadPermissions(Arrays.asList("public_profile, email", "user_birthday", "user_friends", "user_location"));
         loginbutton.registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
@@ -169,6 +170,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void SendFbData() {
+        Intent nig=new Intent(context,MainPage.class);
+        startActivity(nig);
     }
 
     @Override
@@ -186,7 +189,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 loginbutton.performClick();
                 break;
             case R.id.skip:
-                Intent intent2=new Intent(context,TellUsAbit.class);
+                Intent intent2=new Intent(context,MainPage.class);
                 startActivity(intent2);
                 break;
 

@@ -14,12 +14,12 @@
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="23dp"
         android:id="@+id/input_age"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/nat"
-        android:layout_height="wrap_content">
+        android:layout_alignLeft="@+id/country"
+        android:layout_alignStart="@+id/country">
         <co.jlabs.travos.custComp.BebasNeueEditText
             android:layout_width="match_parent"
             android:textColorHint="#9FA0A2"

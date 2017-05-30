@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Travos</string>
+    <string name="app_name">Connecting Traveler</string>
     <string name="facebook_app_id">1371577649589638</string>
     <string name="fb_login_protocol_scheme">fb1371577649589638</string>
     <string name="cancelled">Cancelled</string>

@@ -56,14 +56,16 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.signup:
-
+                Intent inten=new Intent(context, SignUp.class);
+                startActivity(inten);
                 break;
             case R.id.forgot:
                 Intent intent=new Intent(context, ResetPass.class);
                 startActivity(intent);
                 break;
             case R.id.login:
-
+                Intent inte=new Intent(context, MainPage.class);
+                startActivity(inte);
                 break;
             case R.id.skip:
                 Intent intent2=new Intent(context,TellUsAbit.class);
